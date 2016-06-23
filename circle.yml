@@ -1,0 +1,9 @@
+test:
+  override:
+    - echo "no tests on landing page"
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync ./src s3://kosm.io/
