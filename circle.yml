@@ -6,4 +6,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync ./src s3://kosm.io/
+      - aws s3 sync --acl public-read ./src s3://kosm.io/
