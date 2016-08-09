@@ -117,7 +117,7 @@ html, body {
 	    float: left;
 	    display: block;
 	    width: 30% !important;
-	    
+
 	}
 	h1 {
 		font-size: 2.25em;
@@ -1046,7 +1046,7 @@ html, body {
 		margin-left: 1em;
 		padding: 10px 0;
 	}
-   
+
 	.nav-list {
 	    float: right;
 	    margin: 0;
@@ -1059,7 +1059,7 @@ html, body {
 	    margin-right: 15px;
 	}
 	.nav-list-element a {
-	    color: #fff;
+	    color: #555;
 	    font-size: 13px;
 	    font-weight: 300;
 	    text-decoration: none;
@@ -1073,6 +1073,11 @@ html, body {
     		color: #122535;
     	}
     }
+		&.nav-reverse {
+			.nav-list-element a {
+				color: #444;
+			}
+		}
 }
 
 
@@ -1163,8 +1168,8 @@ html, body {
 		        -webkit-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
 		        -moz-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
 		        -ms-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
-		        -o-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite; 
-		    } 
+		        -o-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+		    }
 
 		 }
 
@@ -1175,7 +1180,7 @@ html, body {
 		@-webkit-keyframes scroll {
 		  0%, 20% {transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px); }
 		  10% { transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px); opacity: 1; }
-		  100% {transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);opacity: 0.01; } 
+		  100% {transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);opacity: 0.01; }
 		}
 	}
 
@@ -1200,7 +1205,7 @@ html, body {
 /* Footer */
 
 	#footer {
-		
+
 		padding: 3em 0;
 		@include dark(#122535);
 		/*
