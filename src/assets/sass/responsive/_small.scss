@@ -1,0 +1,144 @@
+@include breakpoint(small) {
+
+  /* Basic */
+
+  body, input, select, textarea {
+    font-size: 12pt;
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  /* List */
+
+  ul {
+    &.major-icons {
+      li {
+        padding: 1.5em;
+
+        .icon {
+          height: 5em;
+          line-height: 5em;
+          width: 5em;
+
+          &:before {
+            font-size: 42px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Icon */
+
+  .icon {
+    &.major {
+      margin: 0 0 (_size(element-margin) * 0.5) 0;
+    }
+  }
+
+  /* Button */
+
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  button,
+  .button {
+    height: 3em;
+    line-height: 3em;
+  }
+
+  /* Main */
+
+  .main {
+    @include padding(3em, 1.5em);
+  }
+
+  /* Navigation */
+  .nav {
+    border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+    background: #fff;
+    position: fixed;
+  }
+
+  .nav-list {
+    display: none;
+
+    &.open {
+      display: block;
+    }
+
+    .nav-list-element {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+
+      a {
+        font-size: 16px;
+        background: #fff;
+        color: #000;
+        display: block;
+        padding: 0 20px;
+        border-top: 1px solid rgba(144, 144, 144, 0.5);
+        -moz-transition: background;
+        -webkit-transition: backgr  ound;
+        -ms-transition: background;
+        transition: background;
+
+        &:hover {
+          color: #fff;
+          background: #4B7B8B;
+        }
+      }
+    }
+  }
+
+  .sticky .menu {
+    color: #555;
+  }
+
+  .menu {
+    display: block;
+    float: right;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    i {
+      padding: 10px;
+    }
+  }
+
+  /* Header */
+
+  #header {
+    @include padding(4em, 3em, (0,0,_size(element-margin),0));
+
+    .actions {
+      margin: _size(element-margin) 0 0 0;
+    }
+    p {
+      max-width: 90%;
+    }
+  }
+
+  /* Footer */
+
+  #footer {
+    @include padding(3em, 1.5em, (0,0,_size(element-margin),0));
+  }
+
+}

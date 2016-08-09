@@ -1,0 +1,73 @@
+.image {
+  border: 0;
+  display: inline-block;
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+  &.left {
+    float: left;
+    padding: 0 1.5em 1em 0;
+    top: 0.25em;
+  }
+
+  &.right {
+    float: right;
+    padding: 0 0 1em 1.5em;
+    top: 0.25em;
+  }
+
+  &.left,
+  &.right {
+    max-width: 40%;
+
+    img {
+      width: 100%;
+    }
+  }
+  &.rounded {
+    img {
+      border-radius: 4px;
+    }
+  }
+
+  &.fit {
+    display: block;
+    margin: 0 0 _size(element-margin) 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+  &.contain {
+    display: block;
+      margin-bottom: 30px;
+      width: 120px;
+      height: 120px;
+      margin-left:auto;
+      margin-right:auto;
+
+    img {
+      height: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &.bigger {
+    display: block;
+      margin-bottom: 30px;
+      width: 180px;
+      height: 180px;
+      margin-left:auto;
+      margin-right:auto;
+
+    img {
+      height: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@include breakpoint(xlarge) {
+
+  /* Basic */
+
+  body, input, select, textarea {
+    font-size: 14pt;
+  }
+
+  /* Header */
+
+  #header {
+    padding: 3em 0;
+    p {
+      max-width: 60%;
+    }
+  }
+}
