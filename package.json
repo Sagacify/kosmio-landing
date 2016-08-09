@@ -5,6 +5,7 @@
   "main": "src/index.html",
   "scripts": {
     "build": "gulp sass",
+    "watch": "gulp sass:watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

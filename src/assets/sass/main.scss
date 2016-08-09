@@ -1032,6 +1032,11 @@ html, body {
 			*/
 		}
 	}
+
+.menu {
+	display: none;
+}
+
 .nav {
 	position: absolute;
     z-index: 2;
@@ -1059,7 +1064,7 @@ html, body {
 	    margin-right: 15px;
 	}
 	.nav-list-element a {
-	    color: #555;
+	    color: #fff;
 	    font-size: 13px;
 	    font-weight: 300;
 	    text-decoration: none;
