@@ -1,0 +1,29 @@
+.icon {
+  @include icon;
+  border-bottom: none;
+  position: relative;
+
+  > .label {
+    display: none;
+  }
+
+  &.style1 { &:before { color: _palette(accent1); } }
+  &.style2 { &:before { color: _palette(accent2); } }
+  &.style3 { &:before { color: _palette(accent3); } }
+  &.style4 { &:before { color: _palette(accent4); } }
+  &.style5 { &:before { color: _palette(accent5); } }
+  &.style6 { &:before { color: _palette(accent6); } }
+
+  &.major {
+    @include icon;
+    color: _palette(fg-bold);
+    cursor: default;
+    display: inline-block;
+    margin: 0 0 (_size(element-margin) * 0.75) 0;
+
+    &:before {
+      font-size: 4em;
+      line-height: 1em;
+    }
+  }
+}

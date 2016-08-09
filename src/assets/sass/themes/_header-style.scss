@@ -1,0 +1,111 @@
+#header {
+  @include padding(9em, 0, (0,0,_size(element-margin),0));
+  @include dark(#142736);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #142736 100%), url("images/misc/earth-space-light.jpg") center center no-repeat;
+  background-position: center bottom;
+  background-size:cover;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  height: 80%;
+  display: table;
+  width: 100%;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: (_size(element-margin) * 0.5) auto 0 auto;
+  }
+
+  .actions {
+    margin: (_size(element-margin) * 1.25) 0 0 0;
+    position: relative;
+
+    &:after {
+      background: _palette(dark, border);
+      content: '';
+      height: 100vh;
+      left: 50%;
+      position: absolute;
+      top: 100%;
+      width: 1px;
+    }
+  }
+
+  .inner {
+    @include vendor('transition', ('transform 1.5s ease', 'opacity 2s ease'));
+    @include vendor('transition-delay', '0.25s');
+    @include vendor('transform', 'scale(1)');
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+    display: table-cell;
+    vertical-align: middle;
+
+    .actions {
+      @include vendor('transition', 'transform 1.25s ease');
+      @include vendor('transition-delay', '1s');
+      @include vendor('transform', 'translateY(0)');
+      opacity: 1;
+    }
+  }
+
+  .section--content--scrolldown {
+    border: 2px solid white;
+    border-radius: 26px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 26px;
+    height: 42px;
+    -webkit-backface-visibility: hidden;
+
+    &:after {
+        background-color: white;
+        border-radius: 100%;
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -2px;
+        width: 4px;
+        height: 4px;
+        opacity: 1;
+        transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+        -webkit-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+        -moz-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+        -ms-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+        -o-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    }
+  }
+
+  @keyframes scroll {
+    0%, 20% { transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px); }
+    10% { transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px); opacity: 1; }
+    100% {  transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px); opacity: 0.01; } }
+  @-webkit-keyframes scroll {
+    0%, 20% {transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px); }
+    10% { transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px); opacity: 1; }
+    100% {transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);opacity: 0.01; }
+  }
+}
+
+body.is-loading {
+  #header {
+    .inner {
+      @include vendor('transform', 'scale(1.05)');
+      opacity: 0;
+
+      .actions {
+        @include vendor('transform', 'translateY(30em)');
+        opacity: 0;
+      }
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}

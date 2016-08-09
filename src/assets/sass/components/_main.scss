@@ -1,0 +1,16 @@
+.main {
+  padding: 3em 0;
+  position: relative;
+
+  &.style1 {
+    background: _palette(bg);
+  }
+
+  &.style2 {
+    @include dark(#122535);
+  }
+
+  &.style3 {
+    background: #F0F0F0;
+  }
+}

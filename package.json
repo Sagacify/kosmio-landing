@@ -1,0 +1,25 @@
+{
+  "name": "kosmio-landing",
+  "version": "1.0.0",
+  "description": "Kosmio landing page http://kosm.io",
+  "main": "src/index.html",
+  "scripts": {
+    "build": "gulp sass",
+    "watch": "gulp sass:watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sagacify/kosmio-landing.git"
+  },
+  "author": "Sagacify",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sagacify/kosmio-landing/issues"
+  },
+  "homepage": "https://github.com/Sagacify/kosmio-landing#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
