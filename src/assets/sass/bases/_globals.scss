@@ -15,7 +15,7 @@ body {
 }
 
 body, input, select, textarea {
-  color: _palette(fg);
+  color: _palette(§);
   font-family: _font(family);
   font-size: 16pt;
   font-weight: _font(weight);
@@ -75,8 +75,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 30% !important;
 
 }
+.hero-large-text {
+  font-size: 2.25em;
+  line-height: 1.35em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: 2.25em;
+  // font-weight: _font(weight-bold);
   line-height: 1.35em;
 }
 
