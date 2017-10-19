@@ -20,6 +20,6 @@
   "homepage": "https://github.com/Sagacify/kosmio-landing#readme",
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-sass": "2.3.2"
+    "gulp-sass": "3.1.0"
   }
 }
